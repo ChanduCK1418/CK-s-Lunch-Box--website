@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #2e7d32;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px;
+}
+
+.btn {
+  background: #f57c00;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+
+/* HOME PAGE */
+
+.home {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f1f8e9;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #f57c00;
+  color: white;
+}
+
+.secondary-btn {
+  background: #2e7d32;
+  color: white;
+}
+
+/* WHY US */
+.why-us {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.why-card {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+  padding: 50px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step {
+  padding: 15px 20px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta {
+  padding: 60px 20px;
+  text-align: center;
+  background: #2e7d32;
+  color: white;
+}
