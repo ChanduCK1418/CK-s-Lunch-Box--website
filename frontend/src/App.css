@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  z-index: 1000;
+}

@@ -1,0 +1,31 @@
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #fff5f5;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #1d1d1d;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.primary-btn {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 24px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.secondary-btn {
+  border: 2px solid #e63946;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
