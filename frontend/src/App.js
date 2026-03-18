@@ -10,7 +10,7 @@ function App() {
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/919515971814"
+        href="https://wa.me/919515971814" className="whatsapp"
         className="whatsapp"
         target="_blank"
         rel="noreferrer"

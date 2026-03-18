@@ -16,7 +16,7 @@
 }
 
 .primary-btn {
-  background-color: #e63946;
+   background-color: var(--primary-red);
   color: white;
   padding: 12px 24px;
   margin-right: 10px;
@@ -25,7 +25,7 @@
 }
 
 .secondary-btn {
-  border: 2px solid #e63946;
+  border: 2px solid var(--primary-red);
   padding: 12px 24px;
   border-radius: 8px;
 }

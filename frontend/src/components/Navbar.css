@@ -23,7 +23,7 @@
 }
 
 .login-btn {
-  background-color: #e63946;
+  background-color: var(--primary-red);
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
