@@ -1,0 +1,144 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-left {
+  flex: 1;
+}
+
+.cart-item-left p {
+  font-weight: 600;
+}
+
+.price {
+  color: #d62828;
+  font-size: 14px;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f8f8;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.cart-controls button {
+  border: none;
+  background: #d62828;
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-controls span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove-btn {
+  margin-left: 10px;
+  border: none;
+  background: transparent;
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  color: #d62828;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #d62828;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+.cart-panel {
+  width: 350px;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #d62828;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #d62828;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.cart-form {
+  margin-top: 15px;
+}
+
+.cart-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.place-order {
+  width: 100%;
+  background: #25d366;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.place-order:hover {
+  background: #1ebe5d;
+}

@@ -36,7 +36,7 @@ const meals = [
   }
 ];
 
-function Menu({ onAddToCart }) {
+function Menu({ onAddToCart, cartItems,decreaseFromMenu }) {
   return (
     <section className="menu-section" id="menu">
       <div className="menu-header">
@@ -45,23 +45,43 @@ function Menu({ onAddToCart }) {
       </div>
 
       <div className="menu-grid">
-        {meals.map((meal) => (
-          <div className="menu-card" key={meal.id}>
-            <img src={meal.image} alt={meal.name} className="meal-image" />
+        {meals.map((meal) => {
 
-            <div className="menu-card-content">
-              <h3>{meal.name}</h3>
-              <p className="menu-description">{meal.description}</p>
+  const existing = cartItems.find(i => i.id === meal.id);
 
-              <div className="menu-footer">
-                <span className="price">{meal.price}</span>
-                <button className="cart-btn" onClick={onAddToCart}>
-                  Add to Cart
-                </button>
-              </div>
-            </div>
+  return (
+    <div className="menu-card" key={meal.id}>
+      
+      <img src={meal.image} alt={meal.name} className="meal-image" />
+
+      <div className="menu-card-content">
+        <h3>{meal.name}</h3>
+        <p className="menu-description">{meal.description}</p>
+
+        <div className="menu-footer">
+          <span className="price">{meal.price}</span>
+
+          <div className="menu-controls">
+            {existing ? (
+              <>
+                <button onClick={() => decreaseFromMenu(meal)}>-</button>
+                <span>{existing.qty}</span>
+                <button onClick={() => onAddToCart(meal)}>+</button>
+              </>
+            ) : (
+              <button onClick={() => onAddToCart(meal)}>
+                Add
+              </button>
+            )}
           </div>
-        ))}
+
+        </div>
+      </div>
+
+    </div>
+  );
+
+})}
       </div>
     </section>
   );

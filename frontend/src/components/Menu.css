@@ -104,3 +104,22 @@
     height: 190px;
   }
 }
+.menu-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu-controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #d62828;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-controls span {
+  font-weight: 600;
+}
