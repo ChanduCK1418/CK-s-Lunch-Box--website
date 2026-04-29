@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Cart from "./components/Cart";
-import whatsappIcon from "./assets/whatsapp.png";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import WhatsappButton from "./components/WhatsappButton";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -67,6 +67,7 @@ function App() {
  };
   return (
   <div>
+    <WhatsappButton />
 
     {toast && <div className="toast">{toast}</div>}
 
