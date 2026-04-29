@@ -5,7 +5,6 @@ import Menu from "./components/Menu";
 import Cart from "./components/Cart";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import WhatsappButton from "./components/WhatsappButton";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
