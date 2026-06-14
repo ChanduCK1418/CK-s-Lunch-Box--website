@@ -1,3 +1,6 @@
+import About from "./components/About";
+import Subscriptions from "./components/Subscriptions";
+import WhatsappButton from "./components/WhatsappButton";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -5,6 +8,7 @@ import Menu from "./components/Menu";
 import Cart from "./components/Cart";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -65,9 +69,9 @@ function App() {
    );
  };
   return (
+  
   <div>
-    <WhatsappButton />
-
+    
     {toast && <div className="toast">{toast}</div>}
 
     <Navbar
@@ -84,6 +88,7 @@ function App() {
       />
      )}
 
+<WhatsappButton />
     <Routes>
       <Route
         path="/"
@@ -95,6 +100,8 @@ function App() {
               cartItems={cartItems}
               decreaseFromMenu={decreaseFromMenu}
             />
+            <Subscriptions />
+            <About /> 
             <section
               id="contact"
               style={{

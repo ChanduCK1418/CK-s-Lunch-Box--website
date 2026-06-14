@@ -14,7 +14,10 @@ function Navbar({ cartCount, toggleCart }) {
       <ul className="nav-links">
         <li><a href="#home">Home</a></li>
          <li><a href="#menu">Menu</a></li>
+         <li><a href="#subscriptions">Subscriptions</a></li>
          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+
 
         {/* ✅ CART ICON */}
         <li className="cart-icon" onClick={toggleCart}>

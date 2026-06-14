@@ -1,0 +1,41 @@
+.about-section {
+  padding: 80px 20px;
+  background: #fff8f5;
+  text-align: center;
+}
+
+.about-section h2 {
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.about-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.about-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card li {
+  margin: 10px 0;
+}
