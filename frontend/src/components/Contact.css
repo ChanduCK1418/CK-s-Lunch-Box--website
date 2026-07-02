@@ -1,0 +1,40 @@
+.contact-section {
+  padding: 80px 20px;
+  background: #f8f8f8;
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+.contact-section h2 {
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}

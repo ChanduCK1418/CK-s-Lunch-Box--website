@@ -73,7 +73,20 @@ function Cart({
         <h2>Your Cart</h2>
 
         {cartItems.length === 0 ? (
-          <p>No items in cart</p>
+          <div className="empty-cart">
+            <h3>🛒 Your Cart is Empty</h3>
+           
+             <p>
+               Looks like you haven't added any meals yet.
+             </p>
+
+            <button
+              className="browse-menu-btn"
+              onClick={toggleCart}
+            >
+              Browse Menu
+            </button>
+          </div>
         ) : (
           <>
             {cartItems.map((item) => (

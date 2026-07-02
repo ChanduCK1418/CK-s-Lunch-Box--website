@@ -1,14 +1,19 @@
+
+import Loader from "./components/Loader";
+import Contact from "./components/Contact";
 import About from "./components/About";
 import Subscriptions from "./components/Subscriptions";
 import WhatsappButton from "./components/WhatsappButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Cart from "./components/Cart";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
+import Footer from "./components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -17,6 +22,22 @@ function App() {
   const toggleCart = () => {
     setShowCart(!showCart);
 };
+ const [loading, setLoading] = useState(true);
+
+ useEffect(() => {
+   const timer = setTimeout(() => {
+     setLoading(false);
+   }, 1200);
+
+   return () => clearTimeout(timer);
+ }, []);
+ useEffect(() => {
+  AOS.init({
+    duration: 800,
+    once: true,
+    easing: "ease-in-out",
+  });
+}, []);
 
   const handleAddToCart = (item) => {
   setToast("Item added to cart");
@@ -68,6 +89,9 @@ function App() {
        .filter(i => i.qty > 0)
    );
  };
+ if (loading) {
+  return <Loader />;
+}
   return (
   
   <div>
@@ -86,6 +110,7 @@ function App() {
         decreaseQty={decreaseQty}
         removeItem={removeItem}
       />
+      
      )}
 
 <WhatsappButton />
@@ -94,26 +119,28 @@ function App() {
         path="/"
         element={
           <>
-            <Hero />
-            <Menu
-              onAddToCart={handleAddToCart}
-              cartItems={cartItems}
-              decreaseFromMenu={decreaseFromMenu}
-            />
-            <Subscriptions />
-            <About /> 
-            <section
-              id="contact"
-              style={{
-                padding: "80px",
-                textAlign: "center",
-                background: "#f8f8f8"
-             }}
-           >
-             <h2>Contact Us</h2>
-             <p>📞 Phone: 9515971814</p>
-             <p>📍 Location: Hyderbad</p>
-           </section>
+            <div data-aos="fade-up">
+              <Hero />
+            </div>
+            <div data-aos="fade-up">
+              <Menu
+                onAddToCart={handleAddToCart}
+                cartItems={cartItems}
+                decreaseFromMenu={decreaseFromMenu}
+               />
+            </div>
+            <div data-aos="fade-up">
+              <Subscriptions />
+            </div>
+            <div data-aos="fade-up">
+              <About /> 
+            </div>
+            <div data-aos="fade-up">
+              <Contact />
+            </div>
+            <div data-aos="fade-up">
+              <Footer />
+            </div>
           </>
         }
       />
